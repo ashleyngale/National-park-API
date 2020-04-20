@@ -2,7 +2,7 @@
 
  const apiKey = 'BiYwNSlrb1AfUpXr19a3dEFiSckeDK8bGU5pcb9E';
 
-const searchURL = 'https://developer.nps.gov/api/v1/parks?';
+const searchURL = 'https://developer.nps.gov/api/v1/parks';
 
 
 function formatQueryParams(params) {
@@ -66,7 +66,7 @@ function watchForm(){
     event.preventDefault();
     const searchTerm = $('#parkName').val();
     const limit = $('#limit').val();
-    const state = $('#stateCode').Val();
+    const state = $('#stateCode').val();
    // const stateCode = $('#stateCode');
     getPark(searchTerm, limit, state);
   });
