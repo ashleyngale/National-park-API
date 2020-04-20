@@ -2,7 +2,7 @@
 
  const apiKey = 'BiYwNSlrb1AfUpXr19a3dEFiSckeDK8bGU5pcb9E';
 
-const searchURL = 'https://developer.nps.gov/api/v1/alerts';
+const searchURL = 'https://developer.nps.gov/api/v1/';
 
 
 function formatQueryParams(params) {
