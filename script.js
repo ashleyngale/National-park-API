@@ -18,10 +18,11 @@ function displayResults(responseJson){
 
 
   for(let i=0; i < responseJson.data.length; i++){
+   console.log(responseJson.data[i]);
     $('#results-list').append(
       `<li>
       <h3>
-      <p>${responseJson.data[i].title}</p><br/>
+      <p>${responseJson.data[i].fullName}</p><br/>
       <p>${responseJson.data[i].description}</p>
       <a href="${responseJson.data[i].url}"> ${responseJson.data[i].url}</a><br/>
       </h3>
@@ -32,7 +33,7 @@ function displayResults(responseJson){
 };
 
 
-function getPark(searchTerm,limit, state){
+function getPark(searchTerm, limit, state){
   const params = {
     limit,
     state,
