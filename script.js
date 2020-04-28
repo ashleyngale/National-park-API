@@ -33,11 +33,10 @@ function displayResults(responseJson){
 };
 
 
-function getPark(searchTerm, limit, state){
+function getPark(limit, stateCode){
   const params = {
     limit,
-    state,
-    q:searchTerm,
+    stateCode,
     api_key:'BiYwNSlrb1AfUpXr19a3dEFiSckeDK8bGU5pcb9E'
   };
 
@@ -65,11 +64,9 @@ function getPark(searchTerm, limit, state){
 function watchForm(){
   $('form').submit(event => {
     event.preventDefault();
-    const searchTerm = $('#parkName').val();
     const limit = $('#limit').val();
     const state = $('#stateCode').val();
-   // const stateCode = $('#stateCode');
-    getPark(searchTerm, limit, state);
+    getPark(limit, state);
   });
 }
 
